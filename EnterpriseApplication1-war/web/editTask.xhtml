@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <h:form>
+               
+                            <table width="100%" height="100%">
+                                <tr><td width="10%"></td>
+                                    <td>
+                                        <h1> 
+                                            Edit
+                                        </h1> 
+                                        <table height="15%" width="100%">  
+                                            <tr>
+                                            </tr>
+                                            <tr>
+                                                <th align="right" width="10%">
+                                                    <h:outputLabel value="Name" for="name"/>
+                                                </th>
+                                                <th align="left">
+                                                    <h:inputText id="name" value="#{statefulTasks.tas.name}" ></h:inputText>
+                                                </th>
+                                                <th>
+                                                    <h:message for="name" style="color:red"/>
+                                                </th>
+                                            </tr>
+
+                                            <tr>
+                                                <th align="right" width="10%">
+                                                    <h:outputLabel value="Description" for="description"/>
+                                                </th>
+                                                <th align="left">
+                                                    <h:inputText id="owner" value="#{statefulTasks.tas.description}" ></h:inputText>
+                                                </th>
+                                                <th>
+                                                    <h:message for="description" style="color:red"/>
+                                                </th>
+                                            </tr>
+
+                                               <tr> 
+                                                <th align="right" width="10%"> 
+                                                    <h:outputLabel value="DueDate" for="dueDate"/> 
+                                                </th> 
+                                                <th align="left"> 
+                                                    <h:inputText id="birthDate" value="#{statefulTasks.tas.dueDate}" required="true"> 
+                                                     <f:convertDateTime pattern="yyyy-MM-dd"/> 
+                                                    </h:inputText> 
+                                                </th> 
+                                                <th> 
+                                                    <h:message for="dueDate" style="color:red" /> 
+                                                </th> 
+                                            </tr> 
+                                            
+                                              
+                                            <tr> 
+                                                <th></th> 
+                                                <th align="left"> 
+                                                    <h:commandButton class="button" onmouseover="this.style.background = '#0077CC';this.style.color = 'white'" onmouseout="this.style.background = 'white';this.style.color = '#0077CC'" value="Edit" action="#{statefulTasks.editTask()}"/> 
+
+                                                </th> 
+                                            </tr> 
+
+                                        </table>
+                                    </td>
+                                    <td width="10%"></td></tr>                             
+                            </table>    
+                        
+         
+            </h:form>
+    </h:body>
+</html>
+
